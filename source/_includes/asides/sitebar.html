@@ -1,0 +1,41 @@
+<section id="titles">
+  <a href="{{ site.url }}" title="{{ site.title }}"><img id="logo" src="/images/{{ site.logo }}" /></a>
+  <h3 id="site_subtitle"><a href="{{ site.url }}" title="{{ site.title }}">{{ site.title }}</a></h3>
+</section>
+
+<section id="menu">
+  <ul>
+    <li><a href="{{ site.url }}/archives/"><i class="fa fa-archive fa-lg"></i>Archives</a></li>
+    <li><a href="{{ site.url }}/about/"><i class="fa fa-info-circle fa-lg"></i>About</a></li>
+    <li><a href="{{ site.url }}/atom.xml"><i class="fa fa-rss fa-lg"></i>Feed</a></li>
+    <li><a href="http://blog.webpay.co.jp" target="_blank"><i class="fa fa-external-link fa-lg"></i>Company Blog</a></li>
+    <li><a href="https://webpay.jp" target="_blank"><i class="fa fa-external-link fa-lg"></i>WebPay</a></li>
+  </ul>
+</section>
+
+<section id="social">
+  {% if site.delicious_user != null %}
+    <a href="https://delicious.com/{{ site.github_user }}" title="delicious#{{ site.delicious_user}}"><i class="fa fa-bookmark fa-2x"></i></a>
+  {% endif %}
+
+  {% if site.disqus_user != null %}
+    <a href="https://disqus.com/{{ site.disus_user }}" title="disqus#{{ site.disqus_user}}"><i class="fa fa-comment fa-2x"></i></a>
+  {% endif %}
+
+  {% if site.googleplus_user != null %}
+    <a href="{{ site.googleplus_profile_url }}" title="g+#{{ site.googleplus_user}}"><i class="fa fa-google-plus fa-2x"></i></a>
+  {% endif %}
+
+  {% if site.github_user != null %}
+    <a href="https://github.com/{{ site.github_user }}" title="{{ site.github_user}}" target="_blank"><i class="fa fa-github fa-2x"></i></a>
+  {% endif %}
+
+  {% if site.pinboard_user != null %}
+    <a href="http://pinboard.in/u:{{ site.pinboard_user }}" title="{{ site.pinboard_user}}"><i class="fa fa-thumb-tack fa-2x"></i></a>
+  {% endif %}
+
+  {% if site.twitter_user != null %}
+    <a href="https://twitter.com/{{ site.twitter_user }}" title="{{ site.twitter_user}}" target="_blank"><i class="fa fa-twitter fa-2x"></i></a>
+  {% endif %}
+  <a href="https://facebook.com/webpay.jp" title="WebPay" target="_blank"><i class="fa fa-facebook-square fa-2x"></i></a>
+</section>
